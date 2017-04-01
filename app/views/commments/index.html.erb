@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Commments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Commentable type</th>
+      <th>Commentable</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commments.each do |commment| %>
+      <tr>
+        <td><%= commment.user_id %></td>
+        <td><%= commment.commentable_type %></td>
+        <td><%= commment.commentable_id %></td>
+        <td><%= commment.content %></td>
+        <td><%= link_to 'Show', commment %></td>
+        <td><%= link_to 'Edit', edit_commment_path(commment) %></td>
+        <td><%= link_to 'Destroy', commment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commment', new_commment_path %>
