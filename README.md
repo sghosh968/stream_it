@@ -1,2 +1,2 @@
 # stream_it
-Sample app to test out streaming with ffmpeg, aws cloudfront &amp; nginx cloudfront
+Sample app to test out streaming with ffmpeg, aws cloudfront &amp; nginx
